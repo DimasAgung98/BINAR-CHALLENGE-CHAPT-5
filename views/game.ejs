@@ -18,27 +18,27 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="src/assets/styles/game.css">
+    <link rel="stylesheet" href="/public/static/src/assets/styles/game.css">
 
     <!-- Title -->
-    <link rel="icon" type="image/png" href="src/assets/images/Dimas.png">
+    <link rel="icon" type="image/png" href="/public/static/src/assets/images/Dimas.png">
     <title>The Game</title>
 </head>
 
 <body>
     <!-- Sound Effect -->
-    <audio id="bgaudio" src="src/assets/mp3/Awakening.mp3"></audio>
-    <audio id="click" src="src/assets/wav/mixkit-retro-game-notification-212.wav"></audio>
+    <audio id="bgaudio" src="/public/static/src/assets/mp3/Awakening.mp3"></audio>
+    <audio id="click" src="/public/static/src/assets/wav/mixkit-retro-game-notification-212.wav"></audio>
 
     <!-- Header Section -->
     <header>
         <nav class="align-items-center d-flex m-3">
             <div class="back-button">
-                <a href="index.html"><i class="bi bi-chevron-left"></i></a>
+                <a href="./"><i class="bi bi-chevron-left"></i></a>
             </div>
             <div class="title">
                 <div class="title-logo">
-                    <img src="src/assets/images/logo.png" alt="logo">
+                    <img src="/public/static/src/assets/images/logo.png" alt="logo">
                 </div>
                 <div class="title-text">
                     <h1>ROCK PAPER SCISSORS</h1>
@@ -55,14 +55,14 @@
                 <h1 id="username" class="player-title">PLAYER 1</h1>
                 <div class="row justify-content-center">
                     <figure class="col-lg-7 pt-4 figure" id="rock">
-                        <input type="image" src="src/assets/images/batu.png" class="player" onclick="getChoice(0)">
+                        <input type="image" src="/public/static/src/assets/images/batu.png" class="player" onclick="getChoice(0)">
                     </figure>
                     <figure class="col-lg-7 pt-4 figure" id="paper">
-                        <input type="image" src="src/assets/images/kertas.png" class="player" onclick="
+                        <input type="image" src="/public/static/src/assets/images/kertas.png" class="player" onclick="
                             getChoice(1)">
                     </figure>
                     <figure class="col-lg-7 pt-4 figure" id="scissors">
-                        <input type="image" src="src/assets/images/gunting.png" class="player" onclick="
+                        <input type="image" src="/public/static/src/assets/images/gunting.png" class="player" onclick="
                             getChoice(2)">
                     </figure>
                 </div>
@@ -105,29 +105,29 @@
                 <h1 class="com-title">COM</h1>
                 <div class="row justify-content-center" style="transform: scaleX(-1);">
                     <figure class="col-lg-7 pt-4 figure" id="com-rock">
-                        <img src="src/assets/images/batu.png" alt="com-rock">
+                        <img src="/public/static/src/assets/images/batu.png" alt="com-rock">
                     </figure>
                     <figure class="col-lg-7 pt-4 figure" id="com-paper">
-                        <img src="src/assets/images/kertas.png" alt="com-paper">
+                        <img src="/public/static/src/assets/images/kertas.png" alt="com-paper">
                     </figure>
                     <figure class="col-lg-7 pt-4 figure" id="com-scissors">
-                        <img src="src/assets/images/gunting.png" alt="com-scissors">
+                        <img src="/public/static/src/assets/images/gunting.png" alt="com-scissors">
                     </figure>
                 </div>
             </div>
             <div class="row text-center">
                 <figure onclick="resetGame()">
-                    <img src="src/assets/images/refresh.png" class="reset-button">
+                    <img src="/public/static/src/assets/images/refresh.png" class="reset-button">
                 </figure>
             </div>
         </main>
         <!-- Main Section End-->
     </div>
 
-    <img class="position-absolute bottom-0" src="src/assets/images/1.png" style="width: 250px;" alt="1">
-    <img class="position-absolute bottom-0 end-0" src="src/assets/images/2.png" style="width: 250px;" alt="2">
+    <img class="position-absolute bottom-0" src="/public/static/src/assets/images/1.png" style="width: 250px;" alt="1">
+    <img class="position-absolute bottom-0 end-0" src="/public/static/src/assets/images/2.png" style="width: 250px;" alt="2">
     <!-- Javascript -->
-    <script src="src/assets/scripts/script.js"></script>
+    <script src="/public/static/src/assets/scripts/script.js"></script>
 </body>
 
 </html>
