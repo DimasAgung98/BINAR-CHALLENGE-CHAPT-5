@@ -14,7 +14,9 @@ app.listen(PORT, () => {
 
 //MIDDLEWARE
 app.use('/public',express.static('public'));
+//BUILT-IN MIDDLEWARE
 app.use(express.json());
+app.use(express.urlencoded({extended: false}));
 
 //CONTROLLER
 const indexController = require('./controllers/index');
