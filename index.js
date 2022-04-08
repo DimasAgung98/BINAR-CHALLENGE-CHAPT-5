@@ -18,7 +18,7 @@ const indexController = require('./controllers/index');
 const gameController = require('./controllers/game');
 const loginController = require('./controllers/login');
 
-//ROUTES
+//ROUTE
 app.get('/', indexController.index);
 app.get('/game', gameController.index);
 app.get('/login', loginController.index);
