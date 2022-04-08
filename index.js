@@ -1,5 +1,7 @@
 //import module express
 const express = require('express');
+//import module morgan
+const morgan = require('morgan');
 //inisiasi module express
 const app = express();
 //localhost port
@@ -18,6 +20,8 @@ const indexController = require('./controllers/index');
 const gameController = require('./controllers/game');
 const loginController = require('./controllers/login');
 
+//morgan logger
+app.use(morgan('dev'));
 //ROUTE
 app.get('/', indexController.index);
 app.get('/game', gameController.index);
