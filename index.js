@@ -20,15 +20,19 @@ app.use(morgan('dev'));
 //CONTROLLER
 const indexController = require('./controllers/index');
 const gameController = require('./controllers/game');
-const loginController = require('./controllers/login');
+const userController = require('./controllers/user');
 const errorController = require('./controllers/404');
 
 
 //ROUTE
 app.get('/', indexController.index);
 app.get('/game', gameController.index);
-app.get('/login', loginController.index);
-//handling unknown endpoints
+app.get('/login', userController.loginIndex);
+//AUTHENTICATION
+app.get('/users', userController.get);
+app.get('/user', userController.getById);
+app.post('/login', userController.login);
+//HANDLING UNKNOWN ENDPOINTS
 app.get('*', errorController.index);
 
 //Running express server using port 8000
