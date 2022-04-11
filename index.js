@@ -30,7 +30,9 @@ app.get('/', indexController.index);
 app.get('/game', gameController.index);
 app.get('/register', registerController.registerIndex);
 app.get('/login', userController.loginIndex);
+app.get('/register', registerController.getAPI);
 //AUTHENTICATION
+app.post('/register', registerController.registerData);
 
 //HANDLING UNKNOWN ENDPOINTS
 app.get('*', errorController.index);
