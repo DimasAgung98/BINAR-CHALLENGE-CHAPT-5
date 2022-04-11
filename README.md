@@ -11,6 +11,12 @@ GET method :
 3. '/login' => login page
 4. '/register' => register page
 
+PROJECT STRUCTURE :
+1. controllers - directory of controllers
+2. db - directory of username and password
+3. public/static - directory of css, javascript, image, and other files
+4. views - directory of ejs file
+
 
 
 
