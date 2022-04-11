@@ -5,9 +5,12 @@ MODULE :
 2. EJS
 3. MORGAN
 
-GET method
-'/' => homepage
-'/game' => game page
-'/login' => login page
-'/register' => register page
+GET method :
+1. '/' => homepage
+2. '/game' => game page
+3. '/login' => login page
+4. '/register' => register page
+
+
+
 
