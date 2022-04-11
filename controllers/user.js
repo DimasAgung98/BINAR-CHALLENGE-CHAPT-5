@@ -3,5 +3,5 @@ function loginIndex(req, res) {
 }
 
 module.exports = {
-    loginIndex,
+    loginIndex
 }
