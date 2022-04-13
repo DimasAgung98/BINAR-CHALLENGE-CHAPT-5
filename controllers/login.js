@@ -1,6 +1,7 @@
 // INITIATE USER.JSON
 users = require('../db/users.json');
 
+//LOGGER STATUS
 function get(req, res) {
     res.status(200).json(users);
 }

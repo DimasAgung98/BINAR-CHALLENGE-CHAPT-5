@@ -22,9 +22,12 @@ function registerData(req, res) {
         password,
     };
     users.push(user);
+    //Rewrite JSON File
     let data = JSON.stringify(users, null, 2);
     fs.writeFileSync('db/users.json', data);
-    console.log(email, password);
+    //LOGGER TERMINAL
+    console.log(user);
+    //LOGER SUCCESS
     res.status(201).json({ message: 'Register berhasil!' }); 
 }
 

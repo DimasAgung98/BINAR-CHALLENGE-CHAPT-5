@@ -18,5 +18,15 @@
     "id": 4,
     "email": "akun4devalappars@gmail.com",
     "password": "123456"
+  },
+  {
+    "id": 5,
+    "email": "akun5devalappars@gmail.com",
+    "password": "akun5"
+  },
+  {
+    "id": 6,
+    "email": "akun6devalappars@gmail.com",
+    "password": "akunkeenam"
   }
 ]
