@@ -11,7 +11,7 @@ function registerData(req, res) {
 
     users.push({email: email, password: password});
     console.log(email, password);
-    res.status(200);
+    res.status(201);
     res.redirect('/');
 }
 

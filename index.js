@@ -1,7 +1,11 @@
+//----------INITIATE----------//
+
 //import module express
 const express = require('express');
 //import module morgan
 const morgan = require('morgan');
+//import route
+const route = require('./controllers/route');
 //inisiasi module express
 const app = express();
 //localhost port
@@ -9,33 +13,17 @@ const PORT = 8000;
 //declare ejs view engine
 app.set('view engine', 'ejs');
 
-//MIDDLEWARE
+//----------MIDDLEWARE, CONTROLLER, ROUTE----------//
+
+//public folder contain content file
 app.use('/public',express.static('public'));
+//MORGAN MODULE LOGGER
+app.use(morgan('dev'));
 //BUILT-IN MIDDLEWARE
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
-//MORGAN MODULE LOGGER
-app.use(morgan('dev'));
-
-//CONTROLLER
-const indexController = require('./controllers/index'); 
-const gameController = require('./controllers/game');
-const userController = require('./controllers/user');
-const registerController = require('./controllers/register');
-const errorController = require('./controllers/404');
-
-
-//ROUTE
-app.get('/', indexController.index);
-app.get('/game', gameController.index);
-app.get('/register', registerController.registerIndex);
-app.get('/login', userController.loginIndex);
-app.get('/register', registerController.getAPI);
-//AUTHENTICATION
-app.post('/register', registerController.registerData);
-
-//HANDLING UNKNOWN ENDPOINTS
-app.get('*', errorController.index);
+//IMPLEMENTATION OF THE ROUTE INTO THE APPLICATION
+app.use(route);
 
 //Running express server using port 8000
 app.listen(PORT, () => {

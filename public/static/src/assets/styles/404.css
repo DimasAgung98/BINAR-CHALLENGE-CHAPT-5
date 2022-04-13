@@ -29,7 +29,7 @@ body {
     margin-top: 40px;
   }
   .buttons-con .action-link-wrap a {
-    background: orange;
+    background: #5A5C6C;
     padding: 8px 25px;
     border-radius: 4px;
     color: #FFF;
@@ -41,7 +41,7 @@ body {
     margin-right: 10px
   }
   .buttons-con .action-link-wrap a:hover {
-    background: #5A5C6C;
+    background: #FF8C00;
     color: #fff;
   }
   
