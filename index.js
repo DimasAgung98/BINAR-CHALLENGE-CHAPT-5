@@ -27,7 +27,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(route);
 app.use(middleware);
 
-//RUNNING EXPRESS SERVER USING PORT  8000
+//RUNNING EXPRESS SERVER USING PORT 8000
 app.listen(PORT, () => {
   console.log(`Server is Runnning On Port ${PORT}`);
 })
