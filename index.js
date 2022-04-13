@@ -1,21 +1,22 @@
 //----------INITIATE----------//
 
-//import module express
+//IMPORT MODULE EXPRESS
 const express = require('express');
-//import module morgan
+//IMPORT MODULE MORGAN
 const morgan = require('morgan');
-//import route
+//IMPORT ROUTE
 const route = require('./controllers/route');
-//inisiasi module express
+const middleware = require('./utils/middleware');
+//INISIASI MODULE EXPRESS
 const app = express();
-//localhost port
+//LOCALHOST PORT
 const PORT = 8000;
-//declare ejs view engine
+//DECLARE EJS VIEW ENGINE
 app.set('view engine', 'ejs');
 
 //----------MIDDLEWARE, CONTROLLER, ROUTE----------//
 
-//public folder contain content file
+//PUBLIC FOLDER CONTAIN CONTENT FILE
 app.use('/public',express.static('public'));
 //MORGAN MODULE LOGGER
 app.use(morgan('dev'));
@@ -24,8 +25,9 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 //IMPLEMENTATION OF THE ROUTE INTO THE APPLICATION
 app.use(route);
+app.use(middleware);
 
-//Running express server using port 8000
+//RUNNING EXPRESS SERVER USING PORT 8000
 app.listen(PORT, () => {
   console.log(`Server is Runnning On Port ${PORT}`);
 })
