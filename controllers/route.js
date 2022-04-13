@@ -15,7 +15,10 @@ router.get('/', indexController.index);
 router.get('/game', gameController.index);
 router.get('/register', registerController.registerIndex);
 router.get('/login', loginController.loginIndex);
-router.get('/register', registerController.getAPI); //new
+router.get('/register', registerController.getAPI);
+router.get('/users', loginController.get);
+router.get('/login', loginController.getById);
+router.post('/login', loginController.login);
 
 //AUTHENTICATION
 router.post('/register', registerController.registerData);
@@ -23,7 +26,6 @@ router.post('/register', registerController.registerData);
 //USERS MANAGEMENT
 router.get('/users', userAPIController.showUser);
 router.get('/users/:id', userAPIController.getUserByID);
-router.post('/users/:id', userAPIController.createUsers);
 
 //EXPORT MODULE ROUTER
 module.exports = router;
