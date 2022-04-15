@@ -26,16 +26,20 @@ function login(req, res) {
     const email = req.body.email; //get body of email
     const password = req.body.password; //get body of password
 
-    const idx = users.findIndex(x => x.email === email);
-    if (idx == -1) {
+    //MENCOCOKAN EMAIL YANG DI INPUTKAN DENGAN DATABASE
+    const dataUsers = users.findIndex(usersInput => usersInput.email === email);
+    //KETIKA EMAIL TIDAK SESUAI DENGAN EMAIL YANG ADA DI DATABASE
+    if (dataUsers == -1) {
         res.status(403).json({
             message: 'Email is not registered'
         });
+    //KETIKA PASSWORD TIDAK SESUAI DENGAN PASSWORD YANG ADA DI DATABASE
     } else {
-        if (users[idx].password != password) {
+        if (users[dataUsers].password != password) {
             res.status(403).json({
                 message: 'Wrong Password'
             });
+        //KETIKA DATA === INPUT (equal value and equal type)
         } else {
             res.status(200).json({
                 message: 'Login successful'

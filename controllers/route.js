@@ -18,9 +18,10 @@ router.get('/login', loginController.loginIndex);
 router.get('/register', registerController.getAPI);
 router.get('/users', loginController.get);
 router.get('/login', loginController.getById);
-router.post('/login', loginController.login);
+
 
 //AUTHENTICATION
+router.post('/login', loginController.login);
 router.post('/register', registerController.registerData);
 
 //USERS MANAGEMENT
