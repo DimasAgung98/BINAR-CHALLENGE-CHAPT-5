@@ -13,6 +13,7 @@ GET method :
 3. '/login' => login page
 4. '/register' => register page
 5. '/users' => data user page
+6. '/users/id' => Get user by id
 
 POST method on Postman :
 1. /register => to add new user on postman
