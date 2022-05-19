@@ -1,42 +1,12 @@
 [
   {
     "id": 1,
-    "email": "akun1devalappars@gmail.com",
+    "username": "admin1devallapars",
     "password": "123456"
   },
   {
     "id": 2,
-    "email": "akun2devalappars@gmail.com",
+    "username": "admin2devallapars",
     "password": "qwerty"
-  },
-  {
-    "id": 3,
-    "email": "akun3devalappars@gmail.com",
-    "password": "abcdef"
-  },
-  {
-    "id": 4,
-    "email": "akun4devalappars@gmail.com",
-    "password": "123456"
-  },
-  {
-    "id": 5,
-    "email": "akun5devalappars@gmail.com",
-    "password": "akun5"
-  },
-  {
-    "id": 6,
-    "email": "akun6devalappars@gmail.com",
-    "password": "akunkeenam"
-  },
-  {
-    "id": 7,
-    "email": "akun7devalappars@gmail.com",
-    "password": "akun7"
-  },
-  {
-    "id": 8,
-    "email": "akun8devalappars@gmail.com",
-    "password": "akun8"
   }
 ]

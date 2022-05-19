@@ -9,6 +9,8 @@ const gameController = require('./game');
 const loginController = require('./login');
 const registerController = require('./register');
 const userAPIController = require('./userAPI');
+const dashboardController = require('./dashboard');
+
 
 // ROUTE
 router.get('/', indexController.index);
@@ -18,6 +20,10 @@ router.get('/login', loginController.loginIndex);
 router.get('/register', registerController.getAPI);
 router.get('/users', loginController.get);
 router.get('/login', loginController.getById);
+router.get('/dashboard', dashboardController.index);
+router.get('/dashboard/player-history', dashboardController.playerHistory);
+router.get('/dashboard/player-list', dashboardController.playerList);
+router.get('/dashboard/leaderboard', dashboardController.leaderBoard);
 
 
 //AUTHENTICATION

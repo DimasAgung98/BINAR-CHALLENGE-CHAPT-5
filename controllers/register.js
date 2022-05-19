@@ -10,8 +10,15 @@ function registerIndex(req, res) {
 //ADD NEW USERS
 function registerData(req, res) {
     //READ DATA BODY
-    const email = req.body.email;
+    const username = req.body.username;
     const password = req.body.password;
+    const email = req.body.email;
+    const birthday = req.body.birthday;
+    const age = req.body.age;
+    const gender = req.body.gender;
+    const country = req.body.subject;
+
+
     //COUNT DATA 
     const lastItem = users[users.length - 1];
     //CREATE NEW ID
@@ -19,8 +26,13 @@ function registerData(req, res) {
     //CREATE NEW DATA OBJECT
     const user = {
         id,
-        email,
+        username,
         password,
+        email,
+        birthday,
+        age,
+        gender,
+        country
     };
     users.push(user);
     //Rewrite JSON File

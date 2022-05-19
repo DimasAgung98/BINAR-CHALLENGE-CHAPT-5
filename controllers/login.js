@@ -23,15 +23,15 @@ function loginIndex(req, res) {
 }
 //LOGIN FUNCTION
 function login(req, res) {
-    const email = req.body.email; //get body of email
+    const username = req.body.username; //get body of username
     const password = req.body.password; //get body of password
 
     //MENCOCOKAN EMAIL YANG DI INPUTKAN DENGAN DATABASE
-    const dataUsers = users.findIndex(usersInput => usersInput.email === email);
+    const dataUsers = users.findIndex(usersInput => usersInput.username === username);
     //KETIKA EMAIL TIDAK SESUAI DENGAN EMAIL YANG ADA DI DATABASE
     if (dataUsers == -1) {
         res.status(403).json({
-            message: 'Email is not registered'
+            message: 'Username is not registered'
         });
     //KETIKA PASSWORD TIDAK SESUAI DENGAN PASSWORD YANG ADA DI DATABASE
     } else {
@@ -41,9 +41,8 @@ function login(req, res) {
             });
         //KETIKA DATA === INPUT (equal value and equal type)
         } else {
-            res.status(200).json({
-                message: 'Login successful'
-            });
+            res.status(200);
+            res.render('dashboard');
         }
     }
 }
